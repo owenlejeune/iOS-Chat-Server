@@ -1,21 +1,21 @@
-# Tic-Tac-Toe
-A simple touch-gesture-based game of Tic-Tac-Toe for iOS
+# iOS Chat Server
+A simple chat server using the websocket library [Starscream](https://github.com/daltoniam/Starscream)
 
 ### Developer Information
 * Owen LeJeune
 * 101034825
 
 ### Usage and Tesing
-1. Begin the game by drawing a game board.
-    * Support for multitouch gestures to draw the lines has been implemented
-    * Once four lines have been drawn, the game will be ready to accept character input
-2. Draw either and X or and O in one of the sections of the board to begin
-3. If and illegal character or 2 of the same characters in a row (eg. X followed by X) are drawn, they will not count and will be removed from the board.
-4. The game will display a prompt at the bottom on the screen, displaying the current character to be drawn (X or O)
-5. A printout of the board is displayed in the console after every move
-6. When a player gets 3 in a row, a line will drawn the winning row, and the prompt will display the winner
-7. Once the game has finished in either a win or tie, double tapping on the screen will clear the screen and a new game board can be drawn
+1. Start the node server from the Chat Server Nodejs with Websockets directory
+2. Navigate to [](http://localhost:3000) in the browser to launch the web client
+3. Open the ChatServer.xcworkspace file from the ChatServer directory
+    * ensure it is the .xcworkspace file and NOT the .xcodeproj; using the .xcworkspace file will make sure the project has access to the Pods dependencies at build time
+4. Start the app on a simulator device
+5. To connect to the server, toggle the Segmented Control to Connect
+    * the server URL is hardcoded so it could connect automatically
+    * once connected, an incoming message will inform you
+6. Send messages from the bowser or iOS client and watch as they appear on the other
 
 ### Enhancements
-* Label to display current players turn and game completion state (win/tie)
-* Different colours when drawing X or O
+1. Clear button to empty current contents of message history
+2. Text input area and send button will shift up and down the screen when the on-screen keyboard activates and deactivates
