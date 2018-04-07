@@ -19,3 +19,8 @@ A simple chat server using the websocket library [Starscream](https://github.com
 ### Enhancements
 1. Clear button to empty current contents of message history
 2. Text input area and send button will shift up and down the screen when the on-screen keyboard activates and deactivates
+
+### Resources
+https://github.com/daltoniam/Starscream
+https://www.raywenderlich.com/143874/websockets-ios-starscream
+https://guides.cocoapods.org/using/using-cocoapods.html
