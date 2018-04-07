@@ -7,28 +7,44 @@
 //
 
 import UIKit
-import SwiftWebSocket
+import Starscream
 
-class ViewController: UIViewController, UITextFieldDelegate{
+class ViewController: UIViewController, UITextFieldDelegate, WebSocketDelegate{
     
     let CONNECT_SEGMENT_INDEX = 0;
     let DISCONNECT_SEGMENT_INDEX = 1;
-    var socket = WebSocket(url: URL(string: "ws://localhost:3000/")!);
-    
+    let ws = WebSocket(url: URL(string: "ws://localhost:3000")!)
     var keyboardHeight: CGFloat = 0.0;
-
+    
     @IBOutlet weak var messageTextField: UITextField!
     @IBOutlet weak var messagesArea: UITextView!
     @IBOutlet weak var sendButton: UIButton!
     
+    func websocketDidConnect(socket: WebSocketClient) {
+        print("connected")
+    }
+    
+    func websocketDidDisconnect(socket: WebSocketClient, error: Error?) {
+        print("disconnected")
+    }
+    
+    func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
+        print("recevied text")
+        messagesArea.text! += "\nReceiving: \(text)"
+    }
+    
+    func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
+        print("recevied data")
+    }
+    
+    
     @IBAction func connectionStateToggled(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == CONNECT_SEGMENT_INDEX {
-            socket.open();
-//            messagesArea.text! += "Connected Successfully"
+            ws.connect();
             messageTextField.isEnabled = true;
             sendButton.isEnabled = true;
         }else{
-            socket.close();
+            ws.disconnect();
             messageTextField.isEnabled = false;
             sendButton.isEnabled = false;
         }
@@ -37,9 +53,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
     @IBAction func sendMessage(_ sender: Any) {
         let messageText = messageTextField.text;
         if let message = messageText {
-            //send message
-            messagesArea.text! += "\nSent: \(message)"
-            socket.send(message);
+            ws.write(string: message);
         }
         messageTextField.text = "";
         messageTextField.resignFirstResponder();
@@ -47,38 +61,10 @@ class ViewController: UIViewController, UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        socket.delegate = self;
+        ws.delegate = self;
         messageTextField.delegate = self;
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-        
-        socket.close();
-        
-        socket.event.open = {
-            print("opened")
-        }
-        socket.event.close = { code, reson, clean in
-            print("close")
-        }
-        socket.event.error = { error in
-            print("error \(error)");
-        }
-        socket.event.message = { message in
-            if let text = message as? String {
-                self.messagesArea.text! += "\nReceived: \(text)"
-            }
-        }
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        textField.resignFirstResponder();
-        sendMessage(sendButton);
-        return true;
-    }
-    
-    deinit {
-        socket.close()
-//        socket.delegate = nil;
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -89,7 +75,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
             }
         }
     }
-
+    
     @objc func keyboardWillHide(notification: NSNotification) {
         if let _ = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y != 0{
@@ -97,5 +83,16 @@ class ViewController: UIViewController, UITextFieldDelegate{
             }
         }
     }
-
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        sendMessage(sendButton);
+        return true;
+    }
+    
+    deinit {
+        ws.disconnect()
+        ws.delegate = nil;
+    }
+    
+    
 }
