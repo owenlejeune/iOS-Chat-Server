@@ -1,12 +1,16 @@
 PODS:
-  - Starscream (3.0.4)
+  - SwiftWebSocket (2.7.0)
 
 DEPENDENCIES:
-  - Starscream (~> 3.0.2)
+  - SwiftWebSocket
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - SwiftWebSocket
 
 SPEC CHECKSUMS:
-  Starscream: f5da93fe6984c77b694366bf7299b7dc63a76f26
+  SwiftWebSocket: 612c9729fd503cb6b0b8b45390c788686dac306f
 
-PODFILE CHECKSUM: d7281954fc855b0ca21c17acb7c48191779fda46
+PODFILE CHECKSUM: 567e483b45fbc389abc17dddee54bf74e516fa70
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.0

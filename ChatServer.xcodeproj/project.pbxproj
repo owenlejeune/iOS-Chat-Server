@@ -14,6 +14,7 @@
 		25339922207522A800760013 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25339920207522A800760013 /* LaunchScreen.storyboard */; };
 		2533992D207522A800760013 /* ChatServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2533992C207522A800760013 /* ChatServerTests.swift */; };
 		25339938207522A900760013 /* ChatServerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25339937207522A900760013 /* ChatServerUITests.swift */; };
+		ED62B2F332831B83781A33C4 /* Pods_ChatServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39E77507C8E2709C9278260A /* Pods_ChatServer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,19 +35,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		25339914207522A800760013 /* ChatServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = ChatServer.app; path = "/Volumes/Clear Drive/Code/2601 Mobile Apps/Assignments/Assignment 4/ChatServer/build/Debug-iphoneos/ChatServer.app"; sourceTree = "<absolute>"; };
+		2515DFEB20790B24005D9512 /* ChatServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2515DFEC20790B24005D9512 /* ChatServerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatServerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2515DFED20790B24005D9512 /* ChatServerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatServerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25339917207522A800760013 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25339919207522A800760013 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2533991C207522A800760013 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2533991E207522A800760013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25339921207522A800760013 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25339923207522A800760013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		25339928207522A800760013 /* ChatServerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ChatServerTests.xctest; path = "/Volumes/Clear Drive/Code/2601 Mobile Apps/Assignments/Assignment 4/ChatServer/build/Debug-iphoneos/ChatServerTests.xctest"; sourceTree = "<absolute>"; };
 		2533992C207522A800760013 /* ChatServerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatServerTests.swift; sourceTree = "<group>"; };
 		2533992E207522A800760013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		25339933207522A900760013 /* ChatServerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ChatServerUITests.xctest; path = "/Volumes/Clear Drive/Code/2601 Mobile Apps/Assignments/Assignment 4/ChatServer/build/Debug-iphoneos/ChatServerUITests.xctest"; sourceTree = "<absolute>"; };
 		25339937207522A900760013 /* ChatServerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatServerUITests.swift; sourceTree = "<group>"; };
 		25339939207522A900760013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39E77507C8E2709C9278260A /* Pods_ChatServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ED97FF8AC73621F9BF17880 /* Pods-ChatServer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatServer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatServer/Pods-ChatServer.debug.xcconfig"; sourceTree = "<group>"; };
 		CF2A899BA60585B1D3130796 /* Pods-ChatServer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatServer.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatServer/Pods-ChatServer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED62B2F332831B83781A33C4 /* Pods_ChatServer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +86,10 @@
 				2533992B207522A800760013 /* ChatServerTests */,
 				25339936207522A900760013 /* ChatServerUITests */,
 				39708DFF25B4980437716219 /* Pods */,
+				2515DFEB20790B24005D9512 /* ChatServer.app */,
+				2515DFEC20790B24005D9512 /* ChatServerTests.xctest */,
+				2515DFED20790B24005D9512 /* ChatServerUITests.xctest */,
+				D5F2BC3563D63F5D11266E35 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +133,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D5F2BC3563D63F5D11266E35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39E77507C8E2709C9278260A /* Pods_ChatServer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,7 +153,6 @@
 				25339911207522A800760013 /* Frameworks */,
 				25339912207522A800760013 /* Resources */,
 				7D8289ED209318F9E527B40C /* [CP] Embed Pods Frameworks */,
-				D67F0433176294D214988949 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,7 +160,7 @@
 			);
 			name = ChatServer;
 			productName = ChatServer;
-			productReference = 25339914207522A800760013 /* ChatServer.app */;
+			productReference = 2515DFEB20790B24005D9512 /* ChatServer.app */;
 			productType = "com.apple.product-type.application";
 		};
 		25339927207522A800760013 /* ChatServerTests */ = {
@@ -164,7 +178,7 @@
 			);
 			name = ChatServerTests;
 			productName = ChatServerTests;
-			productReference = 25339928207522A800760013 /* ChatServerTests.xctest */;
+			productReference = 2515DFEC20790B24005D9512 /* ChatServerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		25339932207522A900760013 /* ChatServerUITests */ = {
@@ -182,7 +196,7 @@
 			);
 			name = ChatServerUITests;
 			productName = ChatServerUITests;
-			productReference = 25339933207522A900760013 /* ChatServerUITests.xctest */;
+			productReference = 2515DFED20790B24005D9512 /* ChatServerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -192,7 +206,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Owen LeJeune";
 				TargetAttributes = {
 					25339913207522A800760013 = {
@@ -284,30 +298,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ChatServer/Pods-ChatServer-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftWebSocket/SwiftWebSocket.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftWebSocket.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatServer/Pods-ChatServer-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D67F0433176294D214988949 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatServer/Pods-ChatServer-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -387,6 +386,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -394,6 +394,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -444,6 +445,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -451,6 +453,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
