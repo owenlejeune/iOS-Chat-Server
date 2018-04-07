@@ -89,6 +89,10 @@ class ViewController: UIViewController, UITextFieldDelegate, WebSocketDelegate{
         return true;
     }
     
+    @IBAction func clearMessages(_ sender: UIButton) {
+        messagesArea.text = "Messages:";
+    }
+    
     deinit {
         ws.disconnect()
         ws.delegate = nil;
