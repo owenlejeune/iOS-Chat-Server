@@ -7,7 +7,7 @@ A simple chat server using the websocket library [Starscream](https://github.com
 
 ### Usage and Tesing
 1. Start the node server from the Chat Server Nodejs with Websockets directory
-2. Navigate to [](http://localhost:3000) in the browser to launch the web client
+2. Navigate to http://localhost:3000 in the browser to launch the web client
 3. Open the ChatServer.xcworkspace file from the ChatServer directory
     * ensure it is the .xcworkspace file and NOT the .xcodeproj; using the .xcworkspace file will make sure the project has access to the Pods dependencies at build time
 4. Start the app on a simulator device
